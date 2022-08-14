@@ -1,0 +1,31 @@
+//
+//  GradientExtensions.swift
+//  Muse
+//
+//  Created by Michel Maalouli on 8/13/22.
+//
+import UIKit
+
+extension CAGradientLayer {
+    
+    func setColors(_ newColors: [CGColor],
+                   animated: Bool = true,
+                   withDuration duration: TimeInterval = 0,
+                   timingFunctionName name: CAMediaTimingFunctionName? = nil) {
+        
+        if !animated {
+            self.colors = newColors
+            return
+        }
+        
+        let colorAnimation = CABasicAnimation(keyPath: "colors")
+        colorAnimation.fromValue = colors
+        colorAnimation.toValue = newColors
+        colorAnimation.duration = duration
+        colorAnimation.isRemovedOnCompletion = false
+        colorAnimation.fillMode = CAMediaTimingFillMode.forwards
+        colorAnimation.timingFunction = CAMediaTimingFunction(name: name ?? .linear)
+
+        add(colorAnimation, forKey: "colorsChangeAnimation")
+    }
+}
