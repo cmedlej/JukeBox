@@ -11,8 +11,8 @@ final class AuthManager {
     static let shared = AuthManager()
     
     struct Constants {
-        static let clientID = "585e4f6e37b04f59a908e5a5554b0efb"
-        static let clientSecret = "39a0cbf4a714428388d7305d7a9e3ec0"
+        static let clientID = "id"
+        static let clientSecret = "secret"
         static let tokenAPIURL = "https://accounts.spotify.com/api/token"
     }
     
