@@ -20,7 +20,7 @@ final class AuthManager {
     
     public var signInURL: URL? {
         let scopes = "user-read-private"
-        let redirectURI = "https://www.iosacademy.io"
+        let redirectURI = "https://www.michelmaalouli.com"
         let base = "https://accounts.spotify.com/authorize"
         let string = "\(base)?response_type=code&client_id=\(Constants.clientID)&scope=\(scopes)&redirect_uri=\(redirectURI)&show_dialog=TRUE"
         return URL(string: string)
@@ -67,7 +67,7 @@ final class AuthManager {
             URLQueryItem(name: "code",
                          value: code),
             URLQueryItem(name: "redirect_uri",
-                         value: "https://www.iosacademy.io")
+                         value: "https://www.michelmaalouli.com")
         ]
         
         var request = URLRequest(url: url)
@@ -111,7 +111,7 @@ final class AuthManager {
     }
     
     private func cacheToken(result: AuthResponse) {
-        UserDefaults.standard.setValue(result.accessToken,
+        UserDefaults.standard.setValue(result.access_token,
                                        forKey: "access_token")
         UserDefaults.standard.setValue(result.refresh_token,
                                        forKey: "refresh_token")

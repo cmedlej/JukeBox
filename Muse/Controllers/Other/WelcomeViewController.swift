@@ -96,7 +96,7 @@ class WelcomeViewController: UIViewController {
         present(mainAppTabBarVC, animated: true)
     }
     
-    func animationOfView() {
+    private func animationOfView() {
         let gradientAnimation = CABasicAnimation(keyPath: "locations")
         gradientAnimation.fromValue = [-0.5, 0, 0.5]
         gradientAnimation.toValue = [0.5, 1, 1.5]
