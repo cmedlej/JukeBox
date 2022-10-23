@@ -3,6 +3,7 @@ by Rayan Khoury, Michel Maalouli, Cynthia Medlej, Chloé Sandoli
 
 
 # About Us
+We want to sleep
 
 
 # The Project
