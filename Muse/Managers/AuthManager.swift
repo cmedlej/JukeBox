@@ -14,8 +14,8 @@ final class AuthManager {
     
     struct Constants {
 
-        static let clientID = "585e4f6e37b04f59a908e5a5554b0efb"
-        static let clientSecret = "a9e60004ebab400191cdf786f27d2710"
+        static let clientID = ""
+        static let clientSecret = ""
 
         static let clientID = "id"
         static let clientSecret = "secret"
