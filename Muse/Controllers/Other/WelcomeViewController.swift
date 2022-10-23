@@ -14,11 +14,11 @@ class WelcomeViewController: UIViewController {
     
     private let welcomeMessage: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 3
+        label.numberOfLines = 5
         label.textAlignment = .center
-        label.text = "Ready to Swing? A playlist for now."
+        label.text = "How do you scare a balloon with a JukeBox? By playing pop music!"
         label.font = UIFont(name: "Avenir-Heavy", size: 30)
-        label.textColor = .systemGray6
+        label.textColor = .white
         return label
     }()
     
@@ -35,8 +35,8 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Muse"
         
+        title = "JukeBox"
         // fill whole view
         self.gradient.frame = self.view.bounds
         self.gradient.colors = [UIColor.systemCyan.cgColor, UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor]
